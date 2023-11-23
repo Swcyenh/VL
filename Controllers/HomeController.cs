@@ -35,6 +35,6 @@ namespace VL.Controllers
         public IActionResult KMNO4()
         {
             return View(); 
-        }
+        }   
     }
 }
