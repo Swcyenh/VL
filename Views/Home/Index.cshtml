@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container-fluid">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner h-50">
+            <div class="carousel-item active " style="height: 500px;">
+                <img src="~/images/class12/Determination_of_concentration_of_KMnO4_solution.png" class="d-block w-100 h-75" alt="...">
+            </div>
+            <div class="carousel-item" style="height: 500px;">
+                <img src="~/images/class11/Heating_of_Solution_in_a_Beaker.png" class="d-block w-100 h-75" alt="...">
+            </div>
+            <div class="carousel-item" style="height: 500px;">
+                <img src="~/images/class10/Identify Bleaching Powder among the given Samples of Chemicals.png" class="d-block w-100 h-75" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col">
+                <a asp-action="Biology">
+                    <img class="img-thumbnail" src="~/images/Home/biology.jpg" />
+                </a>
+            </div>
+            <div class="col">
+                <a asp-action="Chemistry">
+                    <img class="img-thumbnail"  src="~/images/Home/chemistry.jpg" />
+                </a>
+            </div>
+            <div class="col">
+                <a asp-action="Biology">
+                    <img class="img-thumbnail"  src="~/images/Home/computer.jpg" />
+                </a>
+            </div>
+            <div class="col">
+                <a asp-action="Biology">
+                    <img class="img-thumbnail" src="~/images/Home/math.jpg" />
+                </a>
+            </div>
+            <div class="col">
+                <a asp-action="Biology">
+                    <img class="img-thumbnail" src="~/images/Home/physic.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
