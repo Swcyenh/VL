@@ -1,0 +1,224 @@
+<html class=" overthrow-enabled js canvas geolocation video audio localstorage sessionstorage texttrackapi track">
+    <head>
+        <!-- Enable IE9 Standards mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" media="all" href="./css/font.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/reset.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/grid.css">
+        <link href="./css/mainstyle.css" rel="stylesheet" type="text/css">
+        <link href="js/nanoscroller/nanoscroller.css" rel="stylesheet" type="text/css">
+        <script src="js/nanoscroller/overthrow.min.js"></script>
+        <script src="js/jquery/1.7/jquery-1.7.1.js"></script>
+        <script src="js/nanoscroller/jquery.nanoscroller.js"></script>
+        <script type="text/javascript" src="js/nanoscroller/touchready.js"></script>
+        <script type="text/javascript" src="js/nanoscroller/main.js"></script>
+        <!--[if IE]><script src="js/excanvas.js"></script><![endif]-->
+        <link href="./css/simstyle.css" rel="stylesheet" type="text/css">
+        <link href="./js/trip/trip.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" language="javascript">var simPath="https://www.olabs.edu.in/olab/CHE/INC/Determination_of_concentration_of_KMnO4_solution/";</script>
+        <script src="js/jquery/ui/1.8.21/jquery-ui.min.js" language="javascript"></script>
+        <script type="text/javascript" src="js/touchconvert.js"></script>
+        <script language="javascript" type="text/javascript" src="./js/jquery.i18n.js"></script>
+        <script type="text/javascript" src="./js/jQueryRotate.2.2.js"></script>
+        <script language="javascript" type="text/javascript" src="js/jquery.qtip-1.0.0.min.js"></script>
+        <script language="javascript" type="text/javascript" src="./js/help.js"></script>
+        <script language="javascript" type="text/javascript" src="./js/trip/trip.min.js"></script>
+        <script type="text/javascript" src="./js/simcontrols.js"></script>
+        <script language="javascript">
+        var language_script= 'en-IN';
+        var language=language_script.toString();
+            language=language.slice(0, 2);
+            var gt=$;
+            gt.gettext.setLocale(language);
+        </script>
+    </head>
+    <body>
+            <div class="main">
+            <header id="silumatorTemp">
+            <div class="g99 logo">
+            </div>
+            <!-- end .g99 -->
+                <div class="g495 mainTitle">
+                <p id="expName" style="size: 11px;">Determination of Concentration of KMnO<sub>4</sub> Solution</p>
+            </div>
+            <!-- end .g495 -->
+                <div class="g198 menuSet">
+                    
+            </div>
+            <!-- end .g198 -->
+            <div class="g792 bannerFoot">
+            <ul id="olabmenuBar">
+                <li><a href="#">HELP</a></li>
+                <li><a id="olabFullscrBtn" onclick="parent.simFullScreenOlab()" style="cursor:pointer;">FULLSCREEN</a></li>
+                <li><a href="#">EXIT</a></li>
+            </ul>
+            </div>
+                <!-- end .grid_8 -->
+            </header><!-- /header -->
+            <div class="g594 canvasHolder"> 
+                <div id="canvasBox">
+            <div id="mainDiv">
+            <!--Loading Background-->
+            <canvas id="bgCanvas" style="background-image:url(./images/BG.gif);"></canvas>
+            <!--Loading Zoom area-->
+            <div id="buretteZoom">    
+                <img id="buretteZoomWater" src="./images/burette_solution_zoom.png">
+                <img id="buretteZoomScale" src="./images/burette_zoom.png">
+            </div>
+            <img id="zoomArea" src="./images/zoom_area.png">
+            <!--Loading testube animation-->
+            <div id="animLoad"></div>
+            
+            <div id="label_board"><img src="./images/label_board.png"><p id="label_txt">Dil. H<sub>2</sub>SO<sub>4</sub></p></div>
+            
+            <!--Loading conical flask and solution -->
+            <div id="violetDiv"><img id="vImg" src="./images/violetDisolve.png"></div>
+            <div id="conicalflaskArea">	
+                <div id="solutionBgDiv"><img id="solnBG" src="./images/solution_bg.png"></div>
+                <div id="solutionDiv"><img id="soln" src="./images/conical_flask_solution.png">
+                </div>
+                <div id="solutionBgDiv2"><img id="solnBG2" src="./images/solution_bg.png"></div>
+                <div id="solutionDiv2"><img id="soln2" src="./images/conical_flask_solution.png">
+                </div>
+                <img src="./images/conical_flask.png" id="flask" style="cursor: pointer;">
+                <img id="drops" src="./images/drop.png">
+                
+            </div>
+            <!--Loading burette and solution -->
+            <div id="buretteWaterDiv">
+                <img id="buretteWater" src="./images/burette_solution_top.png">
+            </div>
+            <img id="buretteWaterBottom" src="./images/burette_solution_bottom.png">
+            <img class="buretteOffOn" id="buretteOff" src="./images/burette_off.png">
+            <img class="buretteOffOn" id="buretteOn" src="./images/burette_on.png">
+            <div id="onoffCommon"></div>
+            <img id="burette" src="./images/burette_stand.png">
+            <div id="buretteDiv" style="cursor: pointer;"></div>
+            <div id="stand" style="cursor: pointer;"></div>
+            <!--Loading flame and burner -->
+            <div id="flame">
+                <img src="./images/flame1.png" class="flame1">
+                <img src="./images/flame2.png" class="flame2">
+                <img src="./images/flame3.png" class="flame3">
+                <img src="./images/flame4.png" class="flame4">
+            
+            </div>
+            
+            <img id="burner" src="./images/burner.png" style="cursor: pointer;">
+            <img id="burner_btn" src="./images/burner_off.png">
+            <div id="burnerOnOff"></div>
+            <!--Loading label and tooltips -->
+            <p class="varTitleCanvas" id="temperature"><span id="temperatureLabel">Temperature: </span><span id="tempValue"></span></p>
+            <p class="varTitleCanvas" id="volTitrant"></p>
+            
+            
+            <div id="solnPourStart"></div>
+            <div id="solnPour"></div>
+            <!--Loading testube stand and testtube -->
+            <div id="testtube" class="ui-draggable">
+            <img src="./images/testtube_with_solution.png" id="testtubeImg">
+            </div>
+            <img src="./images/testtube_stand.png" id="testtubeStand">
+            <div id="popup"><img id="tooltipImg" src="./images/popup.png"><p id="tooltp">Click on the nozzle or start button to start the titration.</p></div>
+            </div>
+            
+            
+            </div>
+            </div>
+            <div class="g198 controlHolder">
+            <div class="nano has-scrollbar">
+            <ul style="right: -15px;" tabindex="0" class="overthrow content description">
+                <li>
+                    <div class="varBox">         	
+                        <!--Loading combo boxes and sliders-->      
+                        <p class="varTitle"><span id="titrateText">Titrate:</span></p><select class="dropBox" name="titrate" id="titrate"><option value="0">Mohr<sup>'</sup>s salt</option><option value="1">Oxalic acid</option></select>
+                        
+                        <br><br> 
+                        <p class="varTitle"><span id="speedText">Drops rate:</span><span id="speedchg">0.1</span></p>			
+                        <input type="range" class="rangeSlider speed" min="0.1" max="1" id="speed" name="speed" value="0.1" step="0.1"> 
+                        <div class="rangeVals">
+                            <span class="minrange">0.1</span><span class="maxrange">1</span>
+                            <div class="clear"></div>
+                        </div>  <br>
+                    
+                        <p class="varTitle"><span id="molarityText">Molarity of titrate, M1: </span><span id="molaritychg">1</span><span>M</span></p>
+                        <input type="range" class="rangeSlider molarity" min="1" max="10" id="molarity" name="molarity" value="1" step="1"> 
+                        <div class="rangeVals">
+                            <span class="minrange">1</span><span class="maxrange">10</span>
+                            <div class="clear"></div>
+                        </div> <br> 
+                        <p class="varTitle"><span id="volumeText">Volume of titrate, V1:</span> <span id="volumechg">10</span><span>ml
+                        </span></p>
+                        <input type="range" class="rangeSlider volume" min="10" max="20" id="volume" name="volume" value="10" step="1">
+                        <div class="rangeVals">
+                            <span class="minrange">10</span><span class="maxrange">20</span>
+                            <div class="clear"></div>           
+                        </div><br>
+                        <p align="center"><input type="button" class="subButton" name="start" id="start" disabled="disabled" value="Start"></p><br><br>
+                        
+                        <p class="varTitle"><input type="checkbox" id="displayResult" disabled="disabled"><span id="showChecked">Show volume of titrant, V2</span></p><br>
+                        <!--Loading result options-->
+                        <p class="varResult"><u><span id="resultText">Result</span></u></p>
+                            <p class="varTitleReaction" id="reaction">2KMnO<sub>4</sub>  +  8H<sub>2</sub>SO<sub>4</sub> +  10FeSO<sub>4</sub>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>.6H<sub>2</sub>O → K<sub>2</sub>SO<sub>4</sub>+2MnSO<sub>4</sub>+5Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>+ 10(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>+68H<sub>2</sub>O</p> <br>             
+                        
+                            <p class="varTitle"><span id="titrateMoles">No of moles of titrate, n1</span></p>
+                            <p class="varTitle"><span class="varSpace" style="float:left;">=</span><input type="text" class="wideTxtAreaclass" id="molesTitrate" name="molesTitrate" disabled="disabled" style="float:left;"><img id="correct2"></p>
+                            <p class="varTitle"><span id="titrantMoles">No of moles of titrant, n2</span></p>
+                            <p class="varTitle"><span class="varSpace" style="float:left;">=</span><input type="text" class="wideTxtAreaclass" id="molesTitrant" name="molesTitrant" disabled="disabled" style="float:left;"><img id="correct1"></p>
+                    
+                            <p class="varTitle" id="titrntMolarity">Molarity of titrant, a </p>
+                            <p class="varTitle"><span class="varSpace">=</span><span class="varTitle" id="molLabel">(V1 x M1 x n2) /(V2 x n1)</span></p>
+                            <p class="varTitle"><span class="varSpace" style="float:left;">=</span><input type="text" class="wideTxtAreaclass" id="molTitrant" name="molTitrant" disabled="disabled" style="float:left;"><span id="molUnit" style="float:left;">M</span><img id="correct3"></p> 
+                    
+                            <p class="varTitle"><span id="molarMassTitrant">Molar mass of titrant, b</span></p>
+                            <p class="varTitle"><span class="varSpace">=</span><span id="molarMassval"> 158 g/mol</span></p>
+                        <br>
+                        <p class="varTitle"><span id="strngthTitrant">Strength of given titrant, [a xb]</span></p>
+                        <p class="varTitle"><span class="varSpace" style="float:left;">=</span><input type="text" class="wideTxtAreaclass" id="strengthval" name="strengthval" disabled="disabled"><span id="strngthSym">g/lit</span></p>         
+                        <br>
+                    <p class="varResult2" id="result"><img id="correct"><span id="resTxt"></span></p>
+                        <br><br> 
+                        <!--Loading reset buttons-->
+            
+                        <p align="center"><input type="button" class="subButton" name="reset" id="reset" value="Reset"></p>
+                        <br> 
+                    </div>
+            
+                
+                
+            </li>
+            </ul>
+            
+            
+            <div qtip="0" class="qtip qtip-defaults" style="border-radius: 0px; position: absolute; width: 130px; display: none; padding: 0px 0px 0px 14px; top: 172.5px; left: 553px;">
+                    <div class="qtip-tip" dir="ltr" rel="leftMiddle" style="position: absolute; height: 14px; width: 14px; margin: -7px auto 0px; line-height: 0.1px; font-size: 1px; left: 0px; top: 50%;">
+                        <canvas height="14" width="14"></canvas>
+                    </div>  
+                    <div class="qtip-wrapper" style="position:relative; overflow:hidden; text-align:left;"><div class="qtip-borderTop" dir="ltr" style="height:5px; margin-left:5px; line-height:0.1px; font-size:1px; padding:0;">
+                        <div rel="topLeft" style="left:0; position:absolute; height:5px; width:5px; overflow:hidden; line-height:0.1px; font-size:1px">
+                            <canvas height="5" width="5" style="vertical-align: top"></canvas>
+                        </div>
+                        <div rel="topRight" style="right:0; position:absolute; height:5px; width:5px; overflow:hidden; line-height:0.1px; font-size:1px">
+                            <canvas height="5" width="5" style="vertical-align: top"></canvas>
+                        </div>
+                        <div class="qtip-betweenCorners" style="height:5px; width:120px; overflow:hidden; background-color:#FFFFCC; line-height:0.1px; font-size:1px;"></div></div>    
+                        <div class="qtip-contentWrapper" style="overflow: hidden; background: rgb(255, 255, 153); border-width: 0px 5px; border-style: solid; border-color: rgb(255, 255, 204); border-image: initial;">     
+                            <div class="qtip-content qtip-content" style="background: rgb(255, 255, 153); color: black; overflow: hidden; text-align: center; padding: 2px; font-size: 15px;">Burette</div>
+                        </div>
+                    <div class="qtip-borderBottom" dir="ltr" style="height:5px; margin-left:5px; line-height:0.1px; font-size:1px; padding:0;">
+                        <div rel="bottomLeft" style="left:0; position:absolute; height:5px; width:5px; overflow:hidden; line-height:0.1px; font-size:1px">
+                            <canvas height="5" width="5" style="vertical-align: top"></canvas>
+                        </div>
+                        <div rel="bottomRight" style="right:0; position:absolute; height:5px; width:5px; overflow:hidden; line-height:0.1px; font-size:1px">
+                            <canvas height="5" width="5" style="vertical-align: top">
+                            </canvas>
+                        </div>
+                        <div class="qtip-betweenCorners" style="height:5px; width:120px; overflow:hidden; background-color:#FFFFCC; line-height:0.1px; font-size:1px;">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>

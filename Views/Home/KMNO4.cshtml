@@ -4,6 +4,11 @@
         height: 100vh; /* Set height to 100% of the viewport height */
         width: 100vw; /* Set width to 100% of the viewport width */
     }
+
+    .video-iframe {
+        width: 100%; /* Set the desired width for the video iframe */
+        height: 500px; /* Set the desired height for the video iframe */
+    }
 </style>
 <div class="d-flex align-items-start">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -21,13 +26,13 @@
             <p>This is a procedure</p>
         </div>
         <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
-            <p>This is a animation</p>
+            <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/kXI_Om-2XYk?si=k08-dEARSNwG8Yzp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
-            <iframe class="container-fluid " src="~/test2.html"></iframe>
+            <iframe class="container-fluid " src="~/KMNO4.html"></iframe>
         </div>
         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
-            <p>This is a video</p>
+            <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/LzQpbfU7DLo?si=M_KWCU_K1w14sd60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </div>
