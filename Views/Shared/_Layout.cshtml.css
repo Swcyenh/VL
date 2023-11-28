@@ -9,9 +9,11 @@ a.navbar-brand {
 
 a {
     color: darkgrey;
-    
+    font-size: 18px;
 }
-
+body {
+    background-color: #7ea4de;
+}
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -53,3 +55,6 @@ button.accept-policy {
     border-color: black;
 }
 
+.btn-sm{
+    font-size: 20px;
+}

@@ -10,15 +10,42 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <style>
+        body {
+            background-color: #7ea4de;
+    
+        }
+
+        h1 {
+            color:#E7E3D4;
+            font-size: 80px;
+        }
+        header {
+            background-color: #7ea4de;
+        }
+
+        nav {
+            background-color: #c4dbf6;
+        }
+        .card{
+
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid justify-content-center row mx-auto">
         <div class="container col d-flex justify-content-start">
             <img class="rounded" src="~/images/Logo Đại Học Quốc Tế Sài Gòn - SIU.svg" alt="VL"style="width:100px;height:100px"  />
         </div>
+        <div class="container col d-flex justify-content-center">
+            <h1>Virtual Lab</h1>
+        </div>
+        <div class="container col d-flex justify-content-end">
+            <img class="rounded" src="~/images/BF.png" style="width:100px;height:100px" />
+        </div>
     </div>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 ">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom  mb-3 ">
             <div class="container">
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between btn-group">
                     <div class="navbar-brand btn-sm btn-outline-secondary " role="group">
@@ -28,7 +55,7 @@
                         <li class=" nav-link nav-item  " role="group">
                             <div class="dropdown btn-sm btn-outline-secondary">
                                 <a class=" dropdown-toggle  text-dark " style="text-decoration:none" href="#" role="group" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                    About
+                                    Contact Us
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -38,13 +65,13 @@
                             </div>
                         </li>
                         <li class="nav-item btn-sm btn-outline-secondary" role="group">
-                            <a class=" nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class=" nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Training">Training</a>
                         </li>
                         <li class="nav-item btn-sm btn-outline-secondary" role="group">
-                            <a class=" nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class=" nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">News and Events</a>
                         </li>
                         <li class="nav-item btn-sm btn-outline-secondary" role="group">
-                            <a class=" nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class=" nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Languages</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

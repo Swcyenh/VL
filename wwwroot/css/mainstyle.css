@@ -27,11 +27,11 @@ a:hover {
 	overflow: hidden;
 }
 .main {
-	background-color:#FFF;
+	background-color: #4e6dad;
 	background-image: url(../images/main_olab.gif);
 	background-repeat: repeat-x;
 	background-position: left top;
-	border:solid 1px #555555;
+	border: solid 1px #555555;
 }
 .g99.logo {
 	display:none;
