@@ -70,8 +70,16 @@
                         <li class="nav-item btn-sm btn-outline-secondary" role="group">
                             <a class=" nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">News and Events</a>
                         </li>
-                        <li class="nav-item btn-sm btn-outline-secondary" role="group">
-                            <a class=" nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Languages</a>
+                        <li class=" nav-link nav-item  " role="group">
+                            <div class="dropdown btn-sm btn-outline-secondary">
+                                <a class=" dropdown-toggle  text-dark " style="text-decoration:none" href="#" role="group" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Languages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><button class="dropdown-item" onclick="changeLanguage('en')">English</button></li>
+                                    <li><button class="dropdown-item" onclick="changeLanguage('vi')">Vietnamese</button></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

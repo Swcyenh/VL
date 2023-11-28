@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi câu hỏi Hóa học</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e6e6e6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+
+        #question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            display: block;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <div id="question">Hỏi: Hóa học là gì?</div>
+    <button class="option" onclick="checkAnswer('A')">A. Nghệ thuật của việc làm thủy tinh</button>
+    <button class="option" onclick="checkAnswer('B')">B. Nghiên cứu về các chất và cấu trúc của chúng</button>
+    <button class="option" onclick="checkAnswer('C')">C. Việc nấu ăn và làm bếp</button>
+    <button class="option" onclick="checkAnswer('D')">D. Làm vườn và trồng cây</button>
+    <div id="result"></div>
+</div>
+
+<div class="quiz-container">
+    <div id="question">Hỏi: Làm thế nào để xác định nồng độ dung dịch KMnO₄?</div>
+    <button class="option" onclick="checkAnswer('A')">A. Sử dụng phương pháp trắc quang</button>
+    <button class="option" onclick="checkAnswer('B')">B. Sử dụng phương pháp titrimetric</button>
+    <button class="option" onclick="checkAnswer('C')">C. Sử dụng phương pháp nhiễm xạ</button>
+    <button class="option" onclick="checkAnswer('D')">D. Sử dụng phương pháp điện hóa học</button>
+    <div id="result"></div>
+</div>
+
+<div class="quiz-container">
+    <div id="question">Hỏi: Công thức hóa học của KMnO₄ là gì?</div>
+    <button class="option" onclick="checkAnswer('A')">A. K2MnO4</button>
+    <button class="option" onclick="checkAnswer('B')">B. KMnO4</button>
+    <button class="option" onclick="checkAnswer('C')">C. K2Mn2O7</button>
+    <button class="option" onclick="checkAnswer('D')">D. K2O2Mn</button>
+    <div id="result"></div>
+</div>
+
+<script>
+    function checkAnswer(selectedOption) {
+        var correctOption;
+
+        if (selectedOption === 'B') {
+            correctOption = true;
+        } else {
+            correctOption = false;
+        }
+
+        if (correctOption) {
+            document.getElementById('result').textContent = 'Xin Chúc mừng! Bạn đã trả lời đúng bạn sẽ được 1 xu.';
+        } else {
+            document.getElementById('result').textContent = 'Rất tiếc, bạn đã trả lời sai hãy thử vào lần sau nhé .';
+        }
+    }
+</script>
+
+</body>
+</html>
